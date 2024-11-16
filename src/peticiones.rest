@@ -1,0 +1,70 @@
+@url = http://localhost:3000/api
+
+######## POSTS ########
+
+### Get all posts
+GET {{url}}/posts
+
+### Get posts by ID
+GET {{url}}/posts/1
+
+###Get all posts by Author
+GET {{url}}/posts/posts/2
+
+### Post posts
+POST {{url}}/posts
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6IkFpbmhvYSIsInVzZXJJZCI6MiwiaWF0IjoxNzMxNzQ0OTc2fQ.uTA5ZQhhCy9-k-6FHJz0Qcx0tPxoe5jk700smsYG_SM
+
+{
+    "title": "sol",
+    "description": "lluvia en catalunya",
+    "category": "actualidad"
+
+}
+
+### Delete post by ID
+DELETE {{url}}/posts/3
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6IkFpbmhvYSIsInVzZXJJZCI6MiwiaWF0IjoxNzMxNzQ0OTc2fQ.uTA5ZQhhCy9-k-6FHJz0Qcx0tPxoe5jk700smsYG_SM
+
+######## AUTHORS ########
+
+### Get all authors
+GET {{url}}/authors
+
+### Get author by ID
+GET {{url}}/authors/3
+
+### Register author
+POST {{url}}/authors/register
+Content-Type: application/json
+
+{
+    "name": "Arnau",
+    "email": "arnau@gmail.com",
+    "image": "url",
+    "password": "12345"
+    
+}
+
+### Login author
+POST {{url}}/authors/login
+Content-Type: application/json
+
+{
+    "email": "ainhoa@gmail.com",
+    "password": "12345"
+}
+
+### Update author
+PUT {{url}}/authors/2
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6IkFpbmhvYSIsInVzZXJJZCI6MiwiaWF0IjoxNzMxNzQ0OTc2fQ.uTA5ZQhhCy9-k-6FHJz0Qcx0tPxoe5jk700smsYG_SM
+
+{
+    "name": "Ainhoa Molina",
+    "email": "ainhoa@gmail.com",
+    "image": "url",
+    "password": "12345"
+    
+}
